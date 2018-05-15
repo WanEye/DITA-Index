@@ -1,6 +1,6 @@
 # DITA-Index
 
-This utility adds tags <indexterm> to DITA files. You need the following files.
+This utility adds tags `<indexterm>` to DITA files. You need the following files.
 1. DITA files
 2. indexterm.txt in the working directory
 
