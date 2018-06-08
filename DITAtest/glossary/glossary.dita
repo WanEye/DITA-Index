@@ -4,7 +4,9 @@
     <title>Glossary of terms</title>
     <glossentry id="ddl">
         <glossterm><ph conref="../chapter1.dita#Chapter1/HAc"/></glossterm>
-        <glossdef>Weak organic acid.</glossdef>
+        <glossdef>Weak organic acid.<ph
+                
+            /></glossdef>
         <glossBody>
             <glossAlt>
                 <glossAcronym><term id="HAc">HAc</term></glossAcronym>

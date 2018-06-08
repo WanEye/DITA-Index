@@ -44,7 +44,8 @@ def R10BgetIndexterms():
         print ("ERROR: " + routine + "opening or read file " + indextermFile)
         sys.exit()
         
-    global_terms=terms.split(",")
+    global_terms=terms.splitlines()
+  
     indexterms.close()
     
     return
@@ -107,6 +108,7 @@ def R30procTerm(DITAfile, term):
     Overwrite the original file.
     Close the file.
     """
+    
     routine = 'R30 '
     #
     replaceStr = term + '<indexterm>' + term + '</indexterm>'

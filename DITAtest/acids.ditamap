@@ -4,9 +4,19 @@
     <booktitle>
         <mainbooktitle>Acids</mainbooktitle>
     </booktitle>
+    
+    <frontmatter>
+        <topicref format="ditamap" href="conref.ditamap"/>
+        
+    </frontmatter>
     <chapter href="chapter1.dita">
         <topicref href="figures.dita">
          </topicref>
     </chapter>
     <appendix href="glossary/glossary.dita"/>
+    <backmatter>
+        <booklists>
+            <indexlist/>
+        </booklists>
+    </backmatter>
 </bookmap>
