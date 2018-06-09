@@ -15,5 +15,8 @@ To run the utility, you need Python.
 * `indextermGenerator.jpg` Jackson diagram of the program structure
 * `Index_m_all.py` Python code
 
+## Output
+Log file that contains information about the routines that the proghram ran and the indexterms that the program added.
+
 
 

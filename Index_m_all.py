@@ -3,6 +3,9 @@ import sys
 from shutil import copyfile
 
 
+
+
+
 def R10AgetDITAfiles():
     """
     Determine the current directory.
@@ -10,6 +13,9 @@ def R10AgetDITAfiles():
     Put all these .dita files in list global_fileList    
     """
     routine = 'R10A'
+    # global LOGFILE
+   
+    R99writeLog(routine)
     #
     global global_current_Dir
     global global_filesList
@@ -33,6 +39,7 @@ def R10BgetIndexterms():
     Close the terms file.
     """
     routine='R10B '
+    R99writeLog(routine)
     #
     global global_terms
     
@@ -56,6 +63,7 @@ def R10CbackupDITAfiles():
     Make a backup of all .dita files because the program cbanges the files.
     """
     routine = 'R10C '
+    R99writeLog(routine)
     #
     backup_Dir = global_current_Dir + '/DITAbackup/'
     
@@ -94,6 +102,11 @@ def R10initPrg():
     """
     routine = 'R10 '
     # 
+    global LOGFILE
+    LOGFILE = open('logFile.txt', 'w')
+    R99writeLog('routines: indexterm in file: \n')
+    R99writeLog(routine)
+    
     R10AgetDITAfiles()
     R10BgetIndexterms()
     R10CbackupDITAfiles()
@@ -110,7 +123,7 @@ def R30procTerm(DITAfile, term):
     """
     
     routine = 'R30 '
-    #
+        #
     replaceStr = term + '<indexterm>' + term + '</indexterm>'
     
     try:
@@ -125,6 +138,10 @@ def R30procTerm(DITAfile, term):
     if replacedContent != cont:
         DITA.seek(0)
         DITA.write(replacedContent)
+        R99writeLog(routine + "      " + DITAfile + " " + term)
+    else:
+        R99writeLog(routine)
+        
     DITA.close()
     
     return
@@ -135,10 +152,16 @@ def R19finPrg():
     Notify the user that the program is ready.
     """
     routine = 'R19 ' 
+    R99writeLog(routine)
+    LOGFILE.close()
     #
     print ("added indexterms in DITA files in" + global_current_Dir)   
     return
 
+def R99writeLog(routine):
+    
+    LOGFILE.write(routine + '\n')
+    return
 
 ##### MAIN #####
 def R00Main():
