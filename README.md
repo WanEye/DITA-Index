@@ -16,7 +16,31 @@ To run the utility, you need Python.
 * `Index_m_all.py` Python code
 
 ## Output
-Log file that contains information about the routines that the proghram ran and the indexterms that the program added.
+Log file that contains information about the routines that the program ran and the indexterms that the program added.
+
+## Generating the index
+
+### Before you begin
+1. Verify that your DITAMAP file contains the `<indexterm>` tag.
+2. Verify that Python is installed and works from the DITAMAP directory.
+
+To verify:
+  
+  1. Open a command line. For Windows: start cmd. For Linux: Ctrl + Alt + t. For Mac: Terminal.
+  2. Navigate to the directory where your DITAMAP sits.
+  3. Type `python --version`. 
+ #### Result 
+ If you see `Python <version>`, Python works properly.
+  
+### Procedure
+1. Navigate to the directory where your DITAMAP file sits.
+2. Copy `indexterm.txt` to the directory where your DITAMAP file sits.
+3. Copy `Index_m_all.py` to the directory where your DITAMAP file sits. 
+4. Type `python Index_m_all.py`.
+
+#### Result
+* The DITA files contains tags `<indexterm>`.
+* The DITA output comprises a document with index. 
 
 
 
