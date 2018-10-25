@@ -8,6 +8,7 @@ You need the following files.
 3. containedBy.txt in the working directory
 
 To run the utility, you need Python. 
+File names are case sensitive.
 
 ## Contents
 
@@ -19,6 +20,9 @@ To run the utility, you need Python.
 
 ## Output
 Log file that contains information about the routines that the program ran and the indexterms that the program added.
+
+## Note
+indexterm related tags that can contain <indexterm> are not supported.
 
 ## Generating the index
 
