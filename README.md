@@ -22,7 +22,7 @@ File names are case sensitive.
 Log file that contains information about the routines that the program ran and the indexterms that the program added.
 
 ## Note
-indexterm related tags that can contain <indexterm> are not supported.
+indexterm related tags that can contain the indexterm tag are not supported.
 
 ## Generating the index
 
@@ -44,6 +44,7 @@ To verify:
 4. Create a file `indexterms.txt` in the directory where your DITAMAP file sits. 
 5. Write the terms that you want to include in the index in `indexterms.txt`.
 4. Type `python Index_m_all.py`.
+5. OPTIONAL: Change the XML layout in Oxygen **Tools > Format and Indent files ...**
 
 #### Result
 * The DITAMAP file contains the `<indexlist>` tag.
