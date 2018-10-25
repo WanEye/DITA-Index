@@ -20,10 +20,6 @@
 <glossScopeNote>
 <glossUsage>
 <glossdef>
-<index-base>
-<index-see-also>
-<index-see>
-<indexterm>
 <info>
 <itemgroup>
 <keywords>
